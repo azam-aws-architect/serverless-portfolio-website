@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Azam - Cloud Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f0f2f5; color: #333; line-height: 1.6; padding: 20px; }
+        header { background: #1a1a2e; color: #fff; text-align: center; padding: 40px 20px; border-radius: 8px 8px 0 0; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; color: #e94560; }
+        header p { font-size: 1.2rem; color: #fff; }
+        
+        .container { max-width: 900px; margin: auto; background: #fff; border-radius: 0 0 8px 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 40px; }
+        
+        h2 { border-bottom: 2px solid #0f3460; padding-bottom: 8px; margin-bottom: 20px; color: #0f3460; }
+        
+        .section { margin-bottom: 35px; }
+        
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 15px; }
+        .skill-tag { background: #e94560; color: #fff; padding: 8px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+        
+        .project-card { background: #f8f9fa; border-left: 5px solid #0f3460; padding: 20px; border-radius: 4px; margin-top: 15px; }
+        .project-card h3 { color: #0f3460; margin-bottom: 5px; }
+        
+        .social-links { text-align: center; margin-top: 30px; }
+        .btn { display: inline-block; padding: 12px 25px; background: #0f3460; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 5px; transition: 0.3s; }
+        .btn:hover { background: #e94560; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Muhammad Azam</h1>
+        <p>🚀 Cloud & DevOps Engineer | AWS Enthusiast</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I am a passionate Cloud and DevOps Engineer focused on designing, building, and automating scalable and secure cloud infrastructure on AWS. Always eager to learn modern cloud-native technologies and implement CI/CD pipelines.</p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">AWS (EC2, S3, CloudFront)</span>
+                <span class="skill-tag">Linux / Ubuntu</span>
+                <span class="skill-tag">CI/CD Pipelines</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Infrastructure Automation</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Featured Project</h2>
+            <div class="project-card">
+                <h3>Serverless Portfolio Website</h3>
+                <p>Designed and deployed this highly available, static portfolio website utilizing AWS S3 and CloudFront CDN, integrated with a fully automated CI/CD pipeline via GitHub Actions.</p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <h2>Let's Connect</h2>
+            <a href="https://www.linkedin.com/" target="_blank" class="btn">LinkedIn</a>
+            <a href="https://github.com/" target="_blank" class="btn">GitHub</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::muhammad-azam-portfolio-2026/*"
+        }
+    ]
+}
